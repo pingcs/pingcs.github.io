@@ -42,53 +42,8 @@ input[type=submit]:hover {
 <h3>Contact Form</h3>
 
 <div class="container">
-  <form action="#" method="post" name="google">
-    <label for="fname">姓名</label>
-    <input type="text" id="fname" name="name" placeholder="你的名字..">
-
-    <label for="lname">身份證字號</label>
-    <input type="text" id="id" name="id" placeholder="你的身份證字號..">
-
-    <label for="lname">科系</label>
-    <input type="text" id="sub" name="sub" placeholder="你的科系..">
-
-    <label for="lname">班級</label>
-    <input type="text" id="class" name="class" placeholder="你的班級..">
-
-    <label for="lname">銀行別/分行</label>
-    <input type="text" id="bank" name="bank">
- 
-    <label for="lname">銀行帳號</label>
-    <input type="text" id="number" name="number">
- 
-    <label for="lname">電話號碼</label>
-    <input type="text" id="tel" name="tel">
-    
-    <label for="lname">郵件mail</label>
-    <input type="text" id="mail" name="mail">
-    
-    <label for="lname">授課教師</label>
-    <input type="text" id="teacher" name="teacher">
-
-    <label for="subject">申請授課科目</label>
-    <textarea id="subject" name="subject" style="height:60px"></textarea>
-
-    <input type="submit" value="送出" name="Submit">
-  </form>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeODrDez1HN64ZbZyXAvpJVI0Gu3mUGBU86NrafPhuAMdso0w/viewform?embedded=true" width="640" height="382" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
 </div>
-
-    <script type="text/javascript"
-        const scriptURL='https://script.google.com/macros/s/AKfycbxJ4TsAWm3Hyu7x7NqCHZs5ihqxqlp1jvhTV_-FMmkI2VBhE479E2KMePAUNilsiJaS0A/exec'
    
-        const form = document.forms['google']
-          
-          form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => alert("上傳成功"))
-              .catch(error => console.error('Error!', error.message))
-          })
-
-    </script >   
 </body>
 </html>
