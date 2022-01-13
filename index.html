@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;font-size:25px;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="#" method="post" name="google">
+    <label for="fname">姓名</label>
+    <input type="text" id="fname" name="name" placeholder="你的名字..">
+
+    <label for="lname">身份證字號</label>
+    <input type="text" id="id" name="id" placeholder="你的身份證字號..">
+
+    <label for="lname">科系</label>
+    <input type="text" id="sub" name="sub" placeholder="你的科系..">
+
+    <label for="lname">班級</label>
+    <input type="text" id="class" name="class" placeholder="你的班級..">
+
+    <label for="lname">銀行別/分行</label>
+    <input type="text" id="bank" name="bank">
+ 
+    <label for="lname">銀行帳號</label>
+    <input type="text" id="number" name="number">
+ 
+    <label for="lname">電話號碼</label>
+    <input type="text" id="tel" name="tel">
+    
+    <label for="lname">郵件mail</label>
+    <input type="text" id="mail" name="mail">
+    
+    <label for="lname">授課教師</label>
+    <input type="text" id="teacher" name="teacher">
+
+    <label for="subject">申請授課科目</label>
+    <textarea id="subject" name="subject" style="height:60px"></textarea>
+
+    <input type="submit" value="送出" name="Submit">
+  </form>
+</div>
+
+    <script type="text/javascript"
+        const scriptURL='https://script.google.com/macros/s/AKfycbxJ4TsAWm3Hyu7x7NqCHZs5ihqxqlp1jvhTV_-FMmkI2VBhE479E2KMePAUNilsiJaS0A/exec'
+   
+        const form = document.forms['google']
+          
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("上傳成功"))
+              .catch(error => console.error('Error!', error.message))
+          })
+
+    </script >   
+</body>
+</html>
